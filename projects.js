@@ -13,17 +13,6 @@ const portraitProjects = {
       cover: "images/portrait/studio/mens-portraits/cover.jpeg"
     },
 
-    {
-      title: "Birthday Portraits",
-      slug: "birthday-portraits",
-      cover: "images/portrait/studio/birthday-portraits/cover.jpeg"
-    },
-
-    {
-      title: "Baby Portraits",
-      slug: "baby-portraits",
-      cover: "images/portrait/studio/baby-portraits/cover.jpeg"
-    }
   ],
 
   outdoor: [
