@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Andy Tac | Photographer & Videographer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 8%;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 10vw, 140px);
+      line-height: 0.9;
+      letter-spacing: -5px;
+    }
+
+    .hero p {
+      margin-top: 25px;
+      font-size: 18px;
+      color: #aaa;
+      letter-spacing: 2px;
+    }
+
+    /* WORK */
+    .work {
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      font-size: 45px;
+      margin-bottom: 50px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      height: 500px;
+      background: #181818;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      overflow: hidden;
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .project:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 150px 8%;
+      max-width: 1000px;
+    }
+
+    .about h2 {
+      font-size: 45px;
+      margin-bottom: 30px;
+    }
+
+    .about p {
+      font-size: 25px;
+      line-height: 1.5;
+      color: #aaa;
+    }
+
+    /* CONTACT */
+    .contact {
+      min-height: 70vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(50px, 8vw, 100px);
+    }
+
+    .contact p {
+      margin-top: 25px;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 30px 8%;
+      color: #666;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 12px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">ANDY TAC</div>
+
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero">
+    <h1>ANDY<br>TAC</h1>
+
+    <p>
+      PHOTOGRAPHER · VIDEOGRAPHER · CONTENT CREATOR
+    </p>
+  </section>
+
+
+  <section class="work" id="work">
+
+    <h2 class="section-title">Selected Work</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        Portrait
+      </div>
+
+      <div class="project">
+        Food & Restaurant
+      </div>
+
+      <div class="project">
+        Commercial
+      </div>
+
+      <div class="project">
+        Events
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="about" id="about">
+
+    <h2>About</h2>
+
+    <p>
+      Toronto-based photographer & videographer capturing
+      moments, stories, and ideas through my lens.
+    </p>
+
+  </section>
+
+
+  <section class="contact" id="contact">
+
+    <h2>Let's create<br>something.</h2>
+
+    <p>
+      Toronto, Ontario · Available for photography,
+      videography & creative projects.
+    </p>
+
+  </section>
+
+
+  <footer>
+    © 2026 Andy Tac
+  </footer>
+
+</body>
+</html>
