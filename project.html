@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Project | Andy Tac</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">ANDY TAC</a>
+
+    <ul>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <header class="page-header">
+
+    <h1 id="project-title">
+      Project
+    </h1>
+
+    <p id="project-subtitle">
+      Portrait photography by Andy Tac.
+    </p>
+
+  </header>
+
+
+  <main class="gallery-section">
+
+    <div class="gallery" id="project-gallery">
+    </div>
+
+  </main>
+
+
+  <section class="contact">
+
+    <span class="contact-small">
+      Interested in a session?
+    </span>
+
+    <h2>
+      Let's create<br>
+      something.
+    </h2>
+
+    <div class="contact-links">
+
+      <a href="mailto:andyhuynh1108@gmail.com">
+        Email
+      </a>
+
+      <a
+        href="https://www.instagram.com/andytac.tor/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@andy.tac"
+        target="_blank"
+        rel="noopener noreferrer">
+        TikTok
+      </a>
+
+      <a
+        href="https://www.facebook.com/andy.tac.209149"
+        target="_blank"
+        rel="noopener noreferrer">
+        Facebook
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    <span>© 2026 Andy Tac</span>
+    <span>Toronto, Canada</span>
+  </footer>
+
+
+  <script src="projects.js"></script>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+
+    const slug = params.get("project");
+
+
+    const allPortraitProjects = [
+      ...portraitProjects.studio,
+      ...portraitProjects.outdoor
+    ];
+
+
+    const project = allPortraitProjects.find(
+      item => item.slug === slug
+    );
+
+
+    if (!project) {
+
+      document.getElementById("project-title").textContent =
+        "Project Not Found";
+
+      document.getElementById("project-subtitle").textContent =
+        "This project is currently unavailable.";
+
+    } else {
+
+      document.title =
+        project.title + " | Andy Tac";
+
+      document.getElementById("project-title").textContent =
+        project.title;
+
+
+      const gallery =
+        document.getElementById("project-gallery");
+
+
+      const folder =
+        project.cover.substring(
+          0,
+          project.cover.lastIndexOf("/")
+        );
+
+
+      /*
+        Số ảnh tạm thời đang để 12.
+
+        Sau này mình sẽ nâng cấp để mỗi project
+        tự khai báo số lượng ảnh trong projects.js.
+      */
+
+      for (let i = 1; i <= 12; i++) {
+
+        const image = document.createElement("img");
+
+        const number =
+          String(i).padStart(2, "0");
+
+        image.src =
+          folder + "/" + number + ".jpeg";
+
+        image.alt =
+          project.title + " photography by Andy Tac";
+
+        image.loading = "lazy";
+
+
+        image.onerror = function() {
+          this.remove();
+        };
+
+
+        gallery.appendChild(image);
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
