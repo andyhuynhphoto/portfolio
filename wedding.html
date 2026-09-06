@@ -8,6 +8,56 @@
   <title>Wedding Photography | Andy Tac</title>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+  #wedding-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  #wedding-grid .project-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  #wedding-grid .project-card img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+  }
+
+  #wedding-grid .project-info {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    z-index: 2;
+  }
+
+  #wedding-grid .project-info h2 {
+    margin: 0;
+    color: white;
+    font-size: 32px;
+  }
+
+  #wedding-grid .project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0) 55%
+    );
+  }
+
+  @media (max-width: 768px) {
+    #wedding-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 
 <body>
