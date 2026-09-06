@@ -7,6 +7,30 @@
   <title>Couple Photography | Andy Tac</title>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+  #couple-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  #couple-grid .project-card {
+    width: 100%;
+  }
+
+  #couple-grid .project-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    #couple-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 
 <body>
