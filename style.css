@@ -414,3 +414,41 @@ footer {
   object-fit: contain;
   display: block;
 }
+
+.contact-direct {
+  display: flex;
+  gap: 36px;
+  align-items: flex-end;
+  margin-right: 30px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.contact-item a:hover {
+  opacity: 0.65;
+}
+
+@media (max-width: 768px) {
+  .contact-direct {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
