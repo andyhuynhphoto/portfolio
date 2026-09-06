@@ -69,3 +69,11 @@ const weddingProjects = [
     cover: "images/wedding/linh-joshua/cover.jpeg"
   }
 ];
+
+const familyProjects = [
+  {
+    title: "Family Session",
+    slug: "family-session",
+    cover: "images/family/family-session/cover.jpeg"
+  }
+];
