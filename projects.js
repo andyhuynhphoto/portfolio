@@ -55,3 +55,17 @@ const portraitProjects = {
     cover: "images/couple/playdium/cover.jpeg"
   }
 ];
+
+const weddingProjects = [
+  {
+    title: "Danh & Kaytee",
+    slug: "danh-kaytee",
+    cover: "images/wedding/danh-kaytee/cover.jpeg"
+  },
+
+  {
+    title: "Linh & Joshua",
+    slug: "linh-joshua",
+    cover: "images/wedding/linh-joshua/cover.jpeg"
+  }
+];
