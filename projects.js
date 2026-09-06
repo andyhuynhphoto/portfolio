@@ -33,6 +33,8 @@ const portraitProjects = {
       slug: "night-streets",
       cover: "images/portrait/outdoor/night-streets/cover.jpeg"
     },
+  ]
+};
 
  const coupleProjects = [
   {
