@@ -408,11 +408,14 @@ footer {
   gap: 12px;
 }
 
-.header-logo {
-  width: 36px;
-  height: 36px;
+.logo .header-logo {
+  width: 36px !important;
+  height: 36px !important;
+  max-width: 36px !important;
+  max-height: 36px !important;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .contact-direct {
