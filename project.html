@@ -102,15 +102,16 @@
     const slug = params.get("project");
 
 
-    const allPortraitProjects = [
-      ...portraitProjects.studio,
-      ...portraitProjects.outdoor
-    ];
+    const allProjects = [
+  ...portraitProjects.studio,
+  ...portraitProjects.outdoor,
+  ...coupleProjects
+];
 
 
-    const project = allPortraitProjects.find(
-      item => item.slug === slug
-    );
+    const project = allProjects.find(
+  item => item.slug === slug
+);
 
 
     if (!project) {
