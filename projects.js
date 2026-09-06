@@ -72,8 +72,8 @@ const weddingProjects = [
 
 const familyProjects = [
   {
-    title: "Family Session",
-    slug: "family-session",
-    cover: "images/family/family-session/cover.jpeg"
+    title: "Natalie's Family",
+    slug: "natalies-family",
+    cover: "images/family/natalies-family/cover.jpeg"
   }
 ];
