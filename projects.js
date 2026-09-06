@@ -34,6 +34,22 @@ const portraitProjects = {
       cover: "images/portrait/outdoor/night-streets/cover.jpeg"
     },
 
-  ]
+ const coupleProjects = [
+  {
+    title: "Kitchen",
+    slug: "kitchen",
+    cover: "images/couple/kitchen/cover.jpeg"
+  },
 
-};
+  {
+    title: "Subway",
+    slug: "subway",
+    cover: "images/couple/subway/cover.jpeg"
+  },
+
+  {
+    title: "Playdium",
+    slug: "playdium",
+    cover: "images/couple/playdium/cover.jpeg"
+  }
+];
