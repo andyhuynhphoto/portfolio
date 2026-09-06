@@ -34,11 +34,6 @@ const portraitProjects = {
       cover: "images/portrait/outdoor/night-streets/cover.jpeg"
     },
 
-    {
-      title: "Subway After Dark",
-      slug: "subway-after-dark",
-      cover: "images/portrait/outdoor/subway-after-dark/cover.jpeg"
-    }
   ]
 
 };
