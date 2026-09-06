@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Family Photography | Andy Tac</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">ANDY TAC</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portrait.html">Portrait</a>
+      <a href="couple.html">Couple</a>
+      <a href="wedding.html">Wedding</a>
+      <a href="family.html">Family</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="portfolio-page">
+
+      <h1>Family</h1>
+
+      <p class="page-subtitle">
+        Family Photography
+      </p>
+
+      <div class="project-grid" id="family-grid"></div>
+
+    </section>
+
+  </main>
+
+  <script src="projects.js"></script>
+
+  <script>
+    const grid = document.getElementById("family-grid");
+
+    familyProjects.forEach(project => {
+
+      const card = document.createElement("a");
+
+      card.className = "project-card";
+
+      card.href =
+        "project.html?project=" + project.slug;
+
+      card.innerHTML = `
+        <img src="${project.cover}" alt="${project.title}">
+        <div class="project-info">
+          <h2>${project.title}</h2>
+        </div>
+      `;
+
+      grid.appendChild(card);
+
+    });
+  </script>
+
+</body>
+</html>
