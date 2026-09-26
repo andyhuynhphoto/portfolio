@@ -11,9 +11,10 @@
   <style>
   #family-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: none;
   }
 
   #family-grid .project-card {
@@ -24,10 +25,10 @@
 
   #family-grid .project-card img {
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 0.87;
     object-fit: cover;
     display: block;
-  }
+}
 
   #family-grid .project-info {
     position: absolute;
