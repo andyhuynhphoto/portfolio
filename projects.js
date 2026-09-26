@@ -75,5 +75,11 @@ const familyProjects = [
     title: "Natalie's Family",
     slug: "natalies-family",
     cover: "images/family/natalies-family/cover.jpeg"
+  },
+
+  {
+    title: "Minjoo Kim Family",
+    slug: "minjoo-kim-family",
+    cover: "images/family/minjoo-kim-family/cover.jpeg"
   }
 ];
