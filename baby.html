@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Baby Photography | Andy Tac</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">ANDY TAC</a>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portrait.html">Portrait</a></li>
+      <li><a href="couple.html">Couple</a></li>
+      <li><a href="wedding.html">Wedding</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="baby.html">Baby</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Baby</h1>
+    <p>Baby Photography.</p>
+  </header>
+
+  <main class="gallery-section">
+
+    <div class="gallery" id="baby-gallery"></div>
+
+  </main>
+
+  <section class="contact">
+
+    <span class="contact-small">
+      Interested in a session?
+    </span>
+
+    <h2>
+      Let's create<br>
+      something.
+    </h2>
+
+    <div class="contact-links">
+
+      <a href="mailto:andyhuynh1108@gmail.com">
+        Email
+      </a>
+
+      <a
+        href="https://www.instagram.com/andytac.tor/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@andy.tac"
+        target="_blank"
+        rel="noopener noreferrer">
+        TikTok
+      </a>
+
+      <a
+        href="https://www.facebook.com/andy.tac.209149"
+        target="_blank"
+        rel="noopener noreferrer">
+        Facebook
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <span>© 2026 Andy Tac</span>
+    <span>Toronto, Canada</span>
+  </footer>
+
+  <script>
+    const gallery = document.getElementById("baby-gallery");
+
+    for (let i = 1; i <= 50; i++) {
+
+      const image = document.createElement("img");
+
+      const number = String(i).padStart(2, "0");
+
+      image.src = "images/baby/" + number + ".jpeg";
+      image.alt = "Baby photography by Andy Tac";
+      image.loading = "lazy";
+
+      image.onerror = function() {
+        this.remove();
+      };
+
+      gallery.appendChild(image);
+    }
+  </script>
+
+</body>
+</html>
